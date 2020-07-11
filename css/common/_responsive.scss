@@ -1,0 +1,26 @@
+//レスポンシブブレイクポイント
+$wide: 1400px; //PC--wide
+$pc: 1200px; // PC
+$tab: 960px; // タブレット
+$sp: 480px;  // スマホ
+
+@mixin wide {
+  @media (max-width: ($wide)) {
+    @content;
+  }
+}
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}

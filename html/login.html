@@ -3,18 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
     <title>ログイン | A大学</title>
 </head>
 <body>
-    <header>
-        <h1>A大学</h1>
+    <header class="header header--top">
+        <h2>A大学</h2>
     </header>
-    <main>
-        <p>ログイン</p>
-        <a href="./portal.html">ログインする</a>
+    <main class="main">
+        <section class="login">
+            <h1 class="login__heading">A大学<br>授業支援システム</h1>
+            <div class="login-container">
+                <form class="login-container__form" action="#">
+                    <input class="login-container__input" type="text" name="id" placeholder="ID">
+                    <input class="login-container__input" type="password" name="pass" placeholder="パスワード">
+                    
+                    <!-- aタグでログインの動き再現 -->
+                    <a class="login-container__submit" href="./portal.html">ログイン</a>
+                </form>
+            </div>
+        </section>
     </main>
-    <footer>
-
+    <footer class="footer">
+        <p class="footer__copy">
+            Copyright ©  A大学<br>
+            Powered by A-univ System
+        </p>
     </footer>
 </body>
 </html>

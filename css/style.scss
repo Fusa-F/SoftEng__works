@@ -1,0 +1,73 @@
+//リセットcss
+@import url('../css/normalize.css');
+@import 'common/reset';
+
+.header {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    height: 7.2rem;
+    padding: 0 2.4rem;
+    &--top {
+        background-color: $color_light_gray;
+    }
+}
+
+.main {
+    width: 100%;
+    overflow: hidden;
+}
+
+//login
+.login {
+    width: 100%;
+    max-width: 75rem;
+    margin: 9.6rem auto;
+    &__heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        background-color: $color_gray;
+        width: 100%;
+        margin-bottom: 1.6rem;
+        padding: 1rem 0;
+        border-radius: 2rem;
+    }
+}
+
+.login-container {
+    padding: 5.6rem 4rem;
+    box-shadow: 0 2px 10px 0 $color_gray;
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+    &__input {
+        padding: .6rem .8rem;
+        border: 1px solid $color_gray;
+        &::placeholder {
+            color: $color_light_gray;
+        }
+        &:not(:last-child) {
+            margin-bottom: 4.8rem;
+        }
+    }
+    &__submit {
+        display: inline-block;
+        color: $color_gray;
+        width: fit-content;
+        margin: 0 auto;
+        font-size: 2.4rem;
+        font-weight: bold;
+    }
+}
+
+.footer {
+    padding: 2.4rem;
+    border-top: 1px solid $color_gray;
+    &__copy {
+        color: $color_gray;
+        text-align: center;
+    }
+}
