@@ -333,12 +333,12 @@
     }
 }
 
-//report
+//report, message
 .report {
     &__container {
     }
 }
-.report-content {
+.report-content, .message-content {
     border: 1px solid $color_light_gray;
     &__data {
         display: flex;
@@ -362,5 +362,26 @@
     }
     &__desc {
         width: 70%;
+    }
+    &__btn {
+        position: relative;
+        z-index: 1;
+        &::before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            content: '';
+            background: $color_gray;
+            transform-origin: right top;
+            transform: scale(0, 1);
+            transition: transform .3s;
+        }
+        &:hover::before {
+        transform-origin: left top;
+        transform: scale(1, 1);
+        }
     }
 }
