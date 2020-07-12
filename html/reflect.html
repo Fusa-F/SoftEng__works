@@ -3,9 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>提出/振り返り | ポータル</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>提出/○○概論振り返り | ポータル</title>
 </head>
 <body>
-    <p>振り返り</p>
+    <header class="header header--dark">
+        <h2 class="header__heading">A大学授業支援システム</h2>
+        <nav class="header-nav">
+            <a class="header-nav__content" href="./portal.html">授業一覧</a>
+            <a class="header-nav__content header-nav__content--active" href="./report.html">提出</a>
+            <a class="header-nav__content" href="./message.html">連絡</a>    
+        </nav>
+    </header>
+    <main class="main">
+        <p class="main__heading">ようこそ　○○さん</p>
+        <section class="section subject">
+            <h1 class="section__heading">
+                <a href="./report.html">提出</a>
+                 ＞ ○○概論　振り返り
+            </h1>
+            <h4 class="section__sub-heading">課題内容</h4>
+            <div class="subject-content">
+                <ul class="subject-content__description">
+                    <li class="subject-content__description-txt">担当：●●</li>
+                    <li class="subject-content__description-txt">
+                        課題の諸注意：<br>
+                        テキストテキストテキストテキストテキストテキストテキスト
+                    </li>
+                </ul>
+                <div class="subject-content__body subject-content__body--small">
+                    <div class="subject-main subject-main--report">
+                        <p class="subject-main__heading">
+                            提出期限　○/○○
+                        </p>
+                        <div class="subject-main__report">
+                            <textarea name="reflect" class="section__textarea" id="textarea" cols="30" rows="10" placeholder="振り返りを入力する"></textarea>
+                            <a class="section__btn" href="#">提出する</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p class="footer__copy">
+            Copyright ©  A大学<br>
+            Powered by A-univ System
+        </p>
+    </footer>
 </body>
 </html>

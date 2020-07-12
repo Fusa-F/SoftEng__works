@@ -261,6 +261,28 @@ input, textarea {
   font-size: 1.4rem;
 }
 
+.section__textarea {
+  max-width: 60%;
+  padding: .4rem .8rem;
+  border: 1px solid #C1C1C1;
+}
+
+.section__textarea::-webkit-input-placeholder {
+  color: #C1C1C1;
+}
+
+.section__textarea:-ms-input-placeholder {
+  color: #C1C1C1;
+}
+
+.section__textarea::-ms-input-placeholder {
+  color: #C1C1C1;
+}
+
+.section__textarea::placeholder {
+  color: #C1C1C1;
+}
+
 .section-content {
   width: 100%;
   padding: 1.6rem 3.2rem;
@@ -373,6 +395,10 @@ input, textarea {
   border: 1px solid #C1C1C1;
 }
 
+.subject-content__body--small {
+  height: auto;
+}
+
 .subject-side {
   overflow-y: scroll;
   width: 30%;
@@ -408,6 +434,10 @@ input, textarea {
   padding: .8rem 3.2rem;
 }
 
+.subject-main--report {
+  width: 100%;
+}
+
 .subject-main__heading {
   margin-bottom: 1.6rem;
   border-bottom: 1px solid #C1C1C1;
@@ -439,6 +469,18 @@ input, textarea {
 
 .subject-main__btns .section__btn {
   margin-right: 2.4rem;
+}
+
+.subject-main__report {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .subject-log {
