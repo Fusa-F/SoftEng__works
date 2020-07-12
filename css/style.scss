@@ -137,6 +137,11 @@
         background-color: $color_light_gray;
         padding: .8rem 3.2rem;
         border-radius: 1rem;
+        transition: all .5s;
+        &:hover {
+            transform: translateY(-.2rem);
+            transition: all .3s;
+        }
     }
     &__sub-btn {
         display: none;
@@ -402,5 +407,44 @@
         transform-origin: left top;
         transform: scale(1, 1);
         }
+    }
+}
+
+//chat
+.chat-content {
+    overflow-y: scroll;
+    height: 30rem;
+    padding: 1.6rem;
+    border: 1px solid $color_light_gray;
+    &__data {
+        display: flex;
+        align-items: flex-end;
+        &:not(:last-child) {
+            margin-bottom: .8rem;
+        }
+        &--reverse {
+            flex-direction: row-reverse;
+        }
+    }
+    &__txt {
+        width: 60%;
+        padding: .4rem .8rem;
+        border: 1px solid rgba($color_light_gray, .5);
+        border-radius: 2rem;
+    }
+    &__day {
+        margin: 0 .8rem;
+    }
+}
+.chat-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: .4rem .8rem;
+    border: 1px solid $color_light_gray;
+    &__text {
+        width: 50%;
+        height: 100%;
+        border: 1px solid $color_light_gray;        
     }
 }

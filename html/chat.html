@@ -3,9 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
     <title>連絡/●●先生 | ポータル</title>
 </head>
 <body>
-    <p>メッセージ</p>
+    <header class="header header--dark">
+        <h2 class="header__heading">A大学授業支援システム</h2>
+        <nav class="header-nav">
+            <a class="header-nav__content" href="./portal.html">授業一覧</a>
+            <a class="header-nav__content" href="./report.html">提出</a>
+            <a class="header-nav__content header-nav__content--active" href="./message.html">連絡</a>    
+        </nav>
+    </header>
+    <main class="main">
+        <p class="main__heading">ようこそ　○○さん</p>
+        <section class="section subject">
+            <h1 class="section__heading">
+                <a href="./message.html">連絡</a>
+                 ＞ ○○概論　●●先生
+            </h1>
+            <h4 class="section__sub-heading">メッセージ内容</h4>
+            <div class="subject-content">
+                <ul class="chat-content">
+                    <li class="chat-content__data">
+                        <p class="chat-content__txt">
+                            テキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキスト
+                        </p>
+                        <p class="chat-content__day">10:00</p>    
+                    </li>
+                    <li class="chat-content__data">
+                        <p class="chat-content__txt">
+                            テキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキスト
+                        </p>
+                        <p class="chat-content__day">10:00</p>    
+                    </li>
+                    <li class="chat-content__data chat-content__data--reverse">
+                        <p class="chat-content__txt">
+                            テキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキスト
+                        </p>
+                        <p class="chat-content__day">10:00</p>    
+                    </li>
+                    <li class="chat-content__data chat-content__data--reverse">
+                        <p class="chat-content__txt">
+                            テキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキスト
+                        </p>
+                        <p class="chat-content__day">10:00</p>    
+                    </li>
+                    <li class="chat-content__data">
+                        <p class="chat-content__txt">
+                            テキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキスト
+                        </p>
+                        <p class="chat-content__day">10:00</p>    
+                    </li>
+                    <li class="chat-content__data chat-content__data--reverse">
+                        <p class="chat-content__txt">
+                            テキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキスト
+                        </p>
+                        <p class="chat-content__day">10:00</p>    
+                    </li>
+                    <li class="chat-content__data">
+                        <p class="chat-content__txt">
+                            テキストテキストテキストテキストテキストテキスト
+                            テキストテキストテキストテキストテキストテキスト
+                        </p>
+                        <p class="chat-content__day">10:00</p>    
+                    </li>
+                </ul>
+                <div class="chat-input">
+                    <input type="file" id="file" accept=".doc,.docx,.pptx,.xlsx">
+                    <textarea name="chat" class="section__textarea chat-input__text" id="textarea" cols="30" rows="10" placeholder="テキストを入力する"></textarea>
+                    <a class="section__btn" href="#">送信する</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p class="footer__copy">
+            Copyright ©  A大学<br>
+            Powered by A-univ System
+        </p>
+    </footer>
 </body>
 </html>
