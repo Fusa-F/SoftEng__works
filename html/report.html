@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>提出 | ポータル</title>
 </head>
 <body>
     <header class="header header--dark">
         <h2 class="header__heading">A大学授業支援システム</h2>
-        <nav class="header-nav">
+        <div id="js-burger-btn" class="burger-btn header-nav__content">
+            <span class="burger-btn__line"></span>
+        </div>
+        <nav id="js-header-nav" class="header-nav">
             <a class="header-nav__content" href="./portal.html">授業一覧</a>
-            <a class="header-nav__content header-nav__content--active" href="">提出</a>
+            <a class="header-nav__content header-nav__content--active" href="./report.html">提出</a>
             <a class="header-nav__content" href="./message.html">連絡</a>    
         </nav>
     </header>
@@ -99,5 +103,6 @@
             Powered by A-univ System
         </p>
     </footer>
+    <script src="../js/script.js"></script>
 </body>
 </html>
