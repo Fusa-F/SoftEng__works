@@ -41,6 +41,9 @@ input, textarea {
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,8 +54,10 @@ input, textarea {
       -ms-flex-align: center;
           align-items: center;
   color: #fff;
+  width: 100vw;
   height: 5.6rem;
   padding: 0 2.4rem;
+  z-index: 10;
 }
 
 .header--light {
@@ -63,6 +68,67 @@ input, textarea {
   background-color: #707070;
 }
 
+@media (max-width: 960px) {
+  .header__heading {
+    font-size: 2rem;
+  }
+}
+
+.burger-btn {
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 960px) {
+  .burger-btn {
+    display: block;
+    position: relative;
+  }
+}
+
+.burger-btn__line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  width: 2.4rem;
+  border-top: .4rem solid #fff;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.burger-btn__line::before, .burger-btn__line::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: "";
+  width: 100%;
+  border-top: .4rem solid #fff;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.burger-btn__line::before {
+  -webkit-transform: translate(-50%, 100%);
+          transform: translate(-50%, 100%);
+}
+
+.burger-btn__line::after {
+  -webkit-transform: translate(-50%, -300%);
+          transform: translate(-50%, -300%);
+}
+
+.burger-btn:hover .burger-btn__line,
+.burger-btn:hover .burger-btn__line::before,
+.burger-btn:hover .burger-btn__line::after {
+  border-top: 0.4rem solid #707070;
+}
+
 .header-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -71,6 +137,18 @@ input, textarea {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
+}
+
+@media (max-width: 960px) {
+  .header-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 2.4rem;
+    z-index: 10;
+    -webkit-box-shadow: 0 0 5px 0 rgba(193, 193, 193, 0.5);
+            box-shadow: 0 0 5px 0 rgba(193, 193, 193, 0.5);
+  }
 }
 
 .header-nav__content {
@@ -89,10 +167,17 @@ input, textarea {
   padding: 0 3.2rem;
   -webkit-transition: .5s all;
   transition: .5s all;
+  text-align: center;
 }
 
 .header-nav__content:not(:last-child) {
   margin-right: 1.6rem;
+}
+
+@media (max-width: 960px) {
+  .header-nav__content:not(:last-child) {
+    margin: 0;
+  }
 }
 
 .header-nav__content:hover {
@@ -196,6 +281,7 @@ input, textarea {
 .main {
   width: 100%;
   overflow: hidden;
+  margin-top: 6rem;
   padding: .8rem 1.6rem 3.2rem;
 }
 
@@ -208,6 +294,13 @@ input, textarea {
   padding: 1.6rem 3.2rem 3.2rem;
   -webkit-box-shadow: 0 2px 5px 0 #707070;
           box-shadow: 0 2px 5px 0 #707070;
+}
+
+@media (max-width: 960px) {
+  .section {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
 }
 
 .section__heading {
@@ -242,6 +335,12 @@ input, textarea {
   border-radius: 1rem;
   -webkit-transition: all .5s;
   transition: all .5s;
+}
+
+@media (max-width: 960px) {
+  .section__btn:not(:last-child) {
+    margin-bottom: .8rem;
+  }
 }
 
 .section__btn:hover {
@@ -374,6 +473,13 @@ input, textarea {
   transition: all .2s ease-out;
 }
 
+@media (max-width: 960px) {
+  .portal-content__btn {
+    padding: 1.6rem 0;
+    font-size: 1.2rem;
+  }
+}
+
 .portal-content__btn:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
@@ -404,6 +510,16 @@ input, textarea {
   border: 1px solid #C1C1C1;
 }
 
+@media (max-width: 960px) {
+  .subject-content__body {
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .subject-content__body--small {
   height: auto;
 }
@@ -413,6 +529,13 @@ input, textarea {
   width: 30%;
   min-width: 22rem;
   border: 1px solid #C1C1C1;
+}
+
+@media (max-width: 960px) {
+  .subject-side {
+    width: 100%;
+    height: 20rem;
+  }
 }
 
 .subject-side__data {
@@ -441,6 +564,12 @@ input, textarea {
   height: -moz-fit-content;
   height: fit-content;
   padding: .8rem 3.2rem;
+}
+
+@media (max-width: 960px) {
+  .subject-main {
+    width: 100%;
+  }
 }
 
 .subject-main--report {

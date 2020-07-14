@@ -3,12 +3,17 @@
 @import 'common/reset';
 
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: #fff;
+    width: 100vw;
     height: 5.6rem;
     padding: 0 2.4rem;
+    z-index: 10;
     &--light {
         background-color: $color_light_gray;
     }
@@ -16,13 +21,62 @@
         background-color: $color_gray;
     }
     &__heading {
-
+        @include tab {
+            font-size: 2rem;
+        }
+    }
+}
+.burger-btn {
+    cursor: pointer;
+    display: none;
+    @include tab {
+        display: block;
+        position: relative;
+    }
+    &__line {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transform-origin: center center;
+        width: 2.4rem;
+        border-top: .4rem solid #fff;
+        transition: all .5s;
+        &::before, &::after {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            content: "";
+            width: 100%;
+            border-top: .4rem solid #fff;    
+            transform-origin: center center;
+            transition: all .5s;
+        }
+        &::before {
+            transform: translate(-50%, 100%);
+        }
+        &::after {
+            transform: translate(-50%, -300%);
+        }
+    }
+    &:hover &__line,
+    &:hover &__line::before,
+    &:hover &__line::after {
+        border-top: .4rem solid $color_gray;    
     }
 }
 .header-nav {
     display: flex;
     align-items: center;
     height: 100%;
+    @include tab {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 2.4rem;
+        z-index: 10;
+        box-shadow: 0 0 5px 0 rgba($color_light_gray, .5);
+    }
     &__content {
         display: flex;
         justify-content: center;
@@ -32,8 +86,12 @@
         height: 100%;
         padding: 0 3.2rem;
         transition: .5s all;
+        text-align: center;
         &:not(:last-child) {
             margin-right: 1.6rem;
+            @include tab {
+                margin: 0;
+            }
         }
         &:hover {
             color: $color_gray;
@@ -105,6 +163,7 @@
 .main {
     width: 100%;
     overflow: hidden;
+    margin-top: 6rem;
     padding: .8rem 1.6rem 3.2rem;
     &__heading {
         margin-bottom: 1.6rem;
@@ -116,6 +175,10 @@
     width: 100%;
     padding: 1.6rem 3.2rem 3.2rem;
     box-shadow: 0 2px 5px 0 $color_gray;
+    @include tab {
+        padding-left: 1.6rem;
+        padding-right: 1.6rem;
+    }
     &__heading {
         margin-bottom: .8rem;
         font-size: 2rem;
@@ -138,6 +201,11 @@
         padding: .8rem 3.2rem;
         border-radius: 1rem;
         transition: all .5s;
+        @include tab {
+            &:not(:last-child) {
+                margin-bottom: .8rem;
+            }
+        }
         &:hover {
             transform: translateY(-.2rem);
             transition: all .3s;
@@ -221,6 +289,10 @@
         padding: 2.4rem 0;
         box-shadow: 0 2px 5px 0 $color_light_gray;
         transition: all .2s ease-out;
+        @include tab {
+            padding: 1.6rem 0;
+            font-size: 1.2rem;
+        }
         &:hover {
             transform: scale(1.05);
             transition: all .2s ease-out;
@@ -249,6 +321,10 @@
         width: 100%;
         height: 40rem;
         border: 1px solid $color_light_gray;
+        @include tab {
+            height: auto;
+            flex-direction: column;
+        }
         &--small {
             height: auto;
         }
@@ -259,6 +335,10 @@
     width: 30%;
     min-width: 22rem;
     border: 1px solid $color_light_gray;
+    @include tab {
+        width: 100%;
+        height: 20rem;
+    }
     &__data {
         width: 100%;
         &:not(:last-child) {
@@ -280,6 +360,9 @@
     width: 70%;
     height: fit-content;
     padding: .8rem 3.2rem;
+    @include tab {
+        width: 100%;
+    }
     &--report {
         width: 100%;
     }
