@@ -597,3 +597,16 @@
         }       
     }
 }
+
+.flex {
+    display: flex;
+    align-items: baseline;
+}
+.input {
+    margin-right: .8rem;
+    padding: .6rem .8rem;
+    border: 1px solid $color_light_gray;
+    &::placeholder {
+        color: $color_light_gray;
+    }
+}

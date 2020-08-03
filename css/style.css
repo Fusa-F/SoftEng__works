@@ -909,4 +909,35 @@ input, textarea {
     width: 100%;
   }
 }
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.input {
+  margin-right: .8rem;
+  padding: .6rem .8rem;
+  border: 1px solid #C1C1C1;
+}
+
+.input::-webkit-input-placeholder {
+  color: #C1C1C1;
+}
+
+.input:-ms-input-placeholder {
+  color: #C1C1C1;
+}
+
+.input::-ms-input-placeholder {
+  color: #C1C1C1;
+}
+
+.input::placeholder {
+  color: #C1C1C1;
+}
 /*# sourceMappingURL=style.css.map */
